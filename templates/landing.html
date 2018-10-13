@@ -1,0 +1,81 @@
+<div class="col-sm-12">
+  <h1 class="page-header">
+    <button type="button" class="btn btn-primary navbar-btn float-left" ng-click="location.href='#/searchedlocation'">Locations History</button>
+    Moovlee Google Search API
+    <button type="button" class="btn btn-primary navbar-btn float-right" ng-click="logOut()">Log Out</button>
+  </h1>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4 display-block" >
+    <input class="form-group" type="text" gm-places-autocomplete ng-model="autocomplete" style="width: 300px;"/>
+    <h3>Results:</h3>
+    <ul>
+      <li>Latitude: {{ lat }}</li> 
+      <li>Longitude: {{ lng }}</li>
+      <li>Name: {{ name }}</li>
+    </ul>
+  </div>
+  <div class="col-sm-4"></div>
+  <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+   <div id="mymap"></div>
+    <div id="floating-panel">
+      <input id="latlng" type="text" value="{{lat}} , {{lng}}">
+      <input id="submit" type="button" value="Reverse Geocode">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> Location Address</h4>
+      </div>
+      <div class="modal-body">
+          <h3>Results:</h3>
+          <div>
+            <ul>
+            <li>Lat: {{ lat }}</li>
+            <li>Lng: {{ lng }}</li>
+            <li>Name: {{ name }}</li>
+            </ul>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<style>
+      #mymap {
+        height: 1110px;
+        width: 100%;
+        margin: 25px;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        margin-left: -180px;
+        width: 350px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+      }
+      #submit{
+        color: red;
+      }
+     
+</style>
+

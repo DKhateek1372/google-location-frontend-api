@@ -1,0 +1,30 @@
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+  <h1 class="page-header">Login</h1>
+  <section class="display-block">
+      <div class="card-body" style="margin-bottom: 0px;">
+        <form method="POST" name="loginForm" ng-submit="login(loginForm)" tg-form-validation>
+          <div class="row form-group">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+              <input type="email" name="email" ng-model="user.email" class="form-control" placeholder="Email" aria-describedby="sizing-addon1" required="true">
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lock lock" aria-hidden="true"  ></i></span>
+              <input type="password" name="password" ng-model="user.password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1" required="true">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <button type="submit" class="btn btn-primary" value="Login">Login</button>
+              or
+              <a href="#/signup">New User?</a>
+            </div>
+          </div>
+        </form>
+    </div>
+  </section>
+</div>
+<div class="col-sm-3"></div>

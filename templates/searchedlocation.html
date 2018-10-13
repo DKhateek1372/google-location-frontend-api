@@ -1,0 +1,32 @@
+<div class="col-sm-12">
+  <h1 class="page-header">
+    <button type="button" class="btn btn-primary navbar-btn float-left" ng-click="location.href='#/home'">Landing</button>
+    Moovlee Google Location Search API
+    <button type="button" class="btn btn-primary navbar-btn float-right" ng-click="logOut()">Log Out</button>
+  </h1>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8 display-block" >
+    <table class="table" ng-if="locations.length">
+      <th>Name</th>
+      <th>lat</th>
+      <th>Long</th>
+      <th>type</th>
+      <tr ng-repeat="location in locations">
+        <td>{{location.name}}</td>
+        <td>{{location.location.coordinates[0]}}</td>
+        <td>{{location.location.coordinates[1]}}</td>
+        <td>
+          <ul class="list-group">
+            <li ng-repeat="type in location.location.type">
+              {{type}}
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <div ng-if="!locations.length">
+      <label>No location Searched</label>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
