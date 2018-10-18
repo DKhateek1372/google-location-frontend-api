@@ -1,7 +1,7 @@
 # google-location-frontend-api
 
 
-To run this code you need to put this folder into your system local server like XMAPP and start the local server.
+To run this code you need to put YOUR CODE into your system local server like XMAPP and start the local server.
 ( I use XMAPP ).
 use command ----> sudo /opt/lampp/lampp start 
 
