@@ -3,7 +3,7 @@
 
 To run this code you need to put YOUR CODE into your system local server like XMAPP and start the local server.
 ( I use XMAPP ).
-use command ----> sudo /opt/lampp/lampp start 
+use this command ----> sudo /opt/lampp/lampp start 
 
 I use bower so you need to first install BOWER into the code .
 Use this Command --->       $ npm install -g bower
