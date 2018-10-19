@@ -1,6 +1,7 @@
 //author : deepak
 angular.module('moovleeAssignment')
 .controller('LandingCtrl', function($scope, Locations, $location,$window){
+  console.log('LandingCtrl')
   if (!localStorage.getItem('isLoggedIn')) {
     $location.url('/login')
   }

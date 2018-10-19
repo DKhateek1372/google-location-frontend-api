@@ -1,0 +1,31 @@
+{
+  "name": "moovlee",
+  "version": "1.0.0",
+  "description": "location with map",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-cookies": "1.4.8",
+    "angular-resource": "1.4.8",
+    "angular-route": "1.4.8",
+    "angular-ui-bootstrap": "^2.5.6",
+    "lite-server": "^1.3.1",
+    "modernizr": "3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server --port 4200",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deepak2311/google-location-frontend-api.git"
+  },
+  "author": "deepak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deepak2311/google-location-frontend-api/issues"
+  },
+  "homepage": "https://github.com/Deepak2311/google-location-frontend-api#readme"
+}

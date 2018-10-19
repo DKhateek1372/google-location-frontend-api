@@ -1,6 +1,7 @@
 //author : deepak
 angular.module('moovleeAssignment')
-.controller('SignUpCtrl', function($scope, User, $location, SweetAlert){
+.controller('SignUpCtrl', function($scope, User, $location){
+  console.log('signUp')
   var validateEmail =  function(email) {
     return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
   };
@@ -9,15 +10,15 @@ angular.module('moovleeAssignment')
   $scope.submitForm = function (form) {
     console.log("Here");
     if (form.$invalid) {
-      SweetAlert.swal('Alert', "Something Worng");
+      // SweetAlert.swal('Alert', "Something Worng");
       return
     }
     if (!validateEmail($scope.user.email)) {
-      SweetAlert.swal('Error', "Email Address Is Not Correct");
+      // SweetAlert.swal('Error', "Email Address Is Not Correct");
     }
     else {
       if ($scope.user.password != $scope.user.repassword) {
-        SweetAlert.swal('Error', "password is not matching");
+        // SweetAlert.swal('Error', "password is not matching");
         return
       }
       else {

@@ -1,18 +1,19 @@
 //author : deepak
 angular.module('moovleeAssignment')
-.controller('LoginCtrl', ['$scope', '$location', '$rootScope', 'User', 'AuthTokenFactory', 'SweetAlert',
- function($scope, $location, $rootScope, User, AuthTokenFactory, SweetAlert) {
+.controller('LoginCtrl', ['$scope', '$location', '$rootScope', 'User', 'AuthTokenFactory',
+ function($scope, $location, $rootScope, User, AuthTokenFactory, ) {
+  console.log('LoginCtrl')
   var validateEmail =  function(email) {
     return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
   };
   $scope.user = {};
   $scope.login = function (form) {
     if (form.$invalid) {
-      SweetAlert.swal("Error", "Something went Wrong");
+      // SweetAlert.swal("Error", "Something went Wrong");
       return
     }
     if (!validateEmail($scope.user.email)) {
-      SweetAlert.swal('Error', "Email Address Is Not Correct");
+      // SweetAlert.swal('Error', "Email Address Is Not Correct");
     }
     else {
       User.login($scope.user).$promise
@@ -25,7 +26,7 @@ angular.module('moovleeAssignment')
         }
         else {
           $scope.user.password = '';
-          SweetAlert.swal('Error', "Check Email Or Password");
+          // SweetAlert.swal('Error', "Check Email Or Password");
         }
       });
     }

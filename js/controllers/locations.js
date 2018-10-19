@@ -1,6 +1,7 @@
 //author : deepak
 angular.module('moovleeAssignment')
 .controller('Locations', function($scope, $location, Locations){
+  console.log('location')
   $scope.location = location;
   Locations.allSearchedLocation().$promise
   .then (function (searchedlocation) {

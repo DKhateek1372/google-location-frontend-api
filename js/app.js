@@ -5,8 +5,7 @@ var app = angular.module('moovleeAssignment', [
   'ui.bootstrap',
   'ngResource',
   'ngCookies',
-  'gm',
-  'oitozero.ngSweetAlert'
+  'gm'
 ]);
 
 app.config(['$routeProvider', '$httpProvider' ,function($routeProvider, $httpProvider){
