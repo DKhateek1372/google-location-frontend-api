@@ -6,7 +6,8 @@ To run this code you need to put YOUR CODE into your system local server like XM
 use this command ----> sudo /opt/lampp/lampp start 
 
 I use bower so you need to first install BOWER into the code .
-Use this Command --->       $ npm install -g bower
+Use this Command --->       $ npm install -g bower.
+
 After installing bower you need to install all libraries. so use 
 `bower install` command
 
